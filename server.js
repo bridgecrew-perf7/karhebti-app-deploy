@@ -100,12 +100,10 @@ app.get("/policy", function (req, res) {
   res.render("policy.ejs");
 });
 
-const port = process.env.PORT || 3030;
+const PORT = process.env.PORT || 3030;
 
-app.listen(
-  port,
-  "localhost",
+app.listen(PORT, () => {
   console.log(`
       Server is running on : http://localhost:${port}
-      `)
-);
+      `);
+});
