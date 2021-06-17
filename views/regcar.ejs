@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Add new Car</title>
+    <link
+      rel="icon"
+      href="http://pngwebicons.com/uploads/car/ico/car_icon3898.ico"
+    />
+
+    <link rel="stylesheet" href="regstyle.css" />
+    <!-- CSS only -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <!-- JS  -->
+  </head>
+  <body>
+    <!-------------------------Car Register Form------------------------->
+
+    <div class="form-wrap">
+      <% include ./partials/messages %>
+      <form action="/regcar" method="POST" enctype="multipart/form-data">
+        <h1>Enter Car Details</h1><hr>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="vname">Vehicle Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="vname"
+              name="vname"
+              placeholder="BMW"
+              required
+            />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="vmodel">Vehicle Model</label>
+            <input
+              type="text"
+              class="form-control"
+              id="vmodel"
+              name="vmodel"
+              placeholder="i520"
+              required
+            />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="address">Address</label>
+          <input
+            type="text"
+            class="form-control"
+            id="address"
+            name="address"
+            placeholder="xx Street yy"
+            required
+          />
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="phoneno">Phone Number</label>
+            <input
+              type="text"
+              class="form-control"
+              name="phoneno"
+              id="phoneno"
+              placeholder="xxxx-xxxxxxx"
+              required
+            />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="engine">Engine</label>
+            <input
+              type="text"
+              class="form-control"
+              name="engine"
+              id="engine"
+              placeholder="Diesel"
+              required
+            />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="pyear">Production Year</label>
+            <input
+              type="text"
+              class="form-control"
+              id="pyear"
+              name="pyear"
+              placeholder="2017"
+              required
+            />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="price">Price</label>
+            <input
+              type="text"
+              class="form-control"
+              id="price"
+              name="price"
+              placeholder="Price / Day in TND"
+              required
+            />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="color">Color</label>
+            <input
+              type="text"
+              class="form-control"
+              id="color"
+              placeholder="Black"
+              name="color"
+              required
+            />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="trans">Transmission</label>
+            <input
+              type="text"
+              class="form-control"
+              id="trans"
+              name="trans"
+              placeholder="Automatic / Manual"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="file">Choose car's image</label>
+          <input
+            type="file"
+            class="form-control-file"
+            id="file"
+            name="file"
+            required
+          />
+        </div>
+        <input class="button" type="submit" value="Submit your Car" />
+      </form>
+      <hr >
+      <h4 style="text-align: center">
+        Return to <a href="/dashboard2">Dashboard</a>
+      </h6>
+    </div>
+  </body>
+</html>

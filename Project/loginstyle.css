@@ -1,0 +1,161 @@
+body {
+  padding: 0px;
+  margin: 0px;
+  font-family: sans-serif;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(login.jpg);
+  background-size: cover;
+  /* background-position: center;
+  background-repeat: no-repeat; */
+}
+
+#logo {
+  color: white;
+}
+
+.logo:hover {
+  font-size: 1.3em;
+  /* color: rgb(221, 54, 54) !important; */
+}
+
+#nav-bar {
+  position: stricky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar-brand {
+  height: 40px;
+  padding-left: 30px;
+  /* color: darkgrey !important; */
+  /* font-size: 1.5em !important; */
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1;
+}
+
+.navbar-nav li {
+  padding: 0 10px;
+}
+
+.navbar-nav li a {
+  float: right;
+  text-align: left;
+  transition: all ease 0.4s;
+}
+
+#nav-bar ul li a:hover {
+  color: black !important;
+}
+
+.navbar {
+  background: #28a7e9;
+}
+
+.navbar-toggler {
+  border: none !important;
+}
+
+.nav-link {
+  color: white !important;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0px;
+}
+
+.form-wrap {
+  width: 320px;
+  /* background: #3e3d3d; */
+  background-color: rgba(136, 133, 133, 0.5);
+  padding: 40px 20px;
+  box-sizing: border-box;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form-wrap2 {
+  width: 320px;
+  background-color: rgba(136, 133, 133, 0.5);
+  padding: 40px 20px;
+  box-sizing: border-box;
+  position: fixed;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  text-align: center;
+  color: #fff;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+input {
+  width: 100%;
+  background: none;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  padding: 6px 15px;
+  box-sizing: border-box;
+  margin-bottom: 40px;
+  font-size: 16px;
+  color: #fff;
+}
+
+input[type="submit"] {
+  margin-top: 30px;
+  /* background: #bac675; */
+  background: darkgrey;
+  border: 0;
+  cursor: pointer;
+  color: blue;
+}
+
+input[type="submit"]:hover {
+  margin-top: 30px;
+  background: #a4b15c;
+  transition: 0.6s;
+}
+
+::placeholder {
+  color: #fff;
+}
+
+.no_acc {
+  margin-top: 20px;
+  text-align: center;
+  color: white;
+}
+
+.no_acc a {
+  margin-top: 20px;
+  text-align: center;
+  color: black;
+}
+
+.acc {
+  margin-top: 20px;
+  text-align: center;
+  color: white;
+}
+
+.acc a {
+  margin-top: 20px;
+  text-align: center;
+  color: black;
+}
+
+.admin {
+  margin-top: 20px;
+  text-align: left;
+  color: white;
+}

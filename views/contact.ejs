@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact US</title>
+  <link rel="icon" href="http://pngwebicons.com/uploads/car/ico/car_icon3898.ico" />
+  <link rel="stylesheet" href="contactstyle.css" />
+  <!-- CSS only -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+  <!-- JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+  </script>
+
+  <!-- Form style -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+    integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" />
+  <style>
+    html,
+    body {
+      min-height: 100%;
+      padding: 0;
+      margin: 0;
+      /* font-family: Roboto, Arial, sans-serif; */
+      /* font-size: 14px; */
+      color: #666;
+    }
+
+    h1 {
+      margin: 0 0 20px;
+      font-weight: 400;
+      color: #1c87c9;
+    }
+
+    p {
+      margin: 0 0 5px;
+    }
+
+    .main-block {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #4f585e;
+    }
+
+    form {
+      padding: 25px;
+      margin: 25px;
+      box-shadow: 0 2px 5px #f5f5f5;
+      background: #f5f5f5;
+    }
+
+    .fas {
+      margin: 25px 10px 0;
+      font-size: 72px;
+      color: #fff;
+    }
+
+    .fa-envelope {
+      transform: rotate(-20deg);
+    }
+
+    .fa-at,
+    .fa-mail-bulk {
+      transform: rotate(10deg);
+    }
+
+    input,
+    textarea {
+      width: calc(100% - 18px);
+      padding: 8px;
+      margin-bottom: 20px;
+      border: 1px solid #1c87c9;
+      outline: none;
+    }
+
+    input::placeholder {
+      color: #666;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      background: #1c87c9;
+      font-size: 16px;
+      font-weight: 400;
+      color: #fff;
+    }
+
+    button:hover {
+      background: #2371a0;
+    }
+
+    @media (min-width: 568px) {
+      .main-block {
+        flex-direction: row;
+      }
+
+      .left-part,
+      form {
+        width: 50%;
+      }
+
+      .fa-envelope {
+        margin-top: 0;
+        margin-left: 20%;
+      }
+
+      .fa-at {
+        margin-top: -10%;
+        margin-left: 65%;
+      }
+
+      .fa-mail-bulk {
+        margin-top: 2%;
+        margin-left: 28%;
+      }
+    }
+  </style>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap" rel="stylesheet" />
+
+</head>
+
+<body>
+  <!-----------------------------Nav-Bar---------------------------->
+  <header>
+    <section id="nav-bar">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand logo" id="logo" href="/welcome">Karhebti App</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/welcome">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/contact">CONTACT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/users/login">LOGIN</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/users/register">REGISTER</a>
+          </li>
+          
+        </ul>
+      </div>
+    </nav>
+  </section>
+
+  </header>
+  <!---------------------contact section--------------------------->
+  <main>
+    <div class="main-block">
+      <% include ./partials/messages %>
+      <div class="left-part">
+        <i class="fas fa-envelope"></i>
+        <i class="fas fa-at"></i>
+        <i class="fas fa-mail-bulk"></i>
+      </div>
+      <form action="/contact" method="POST">
+        <h1>Email us to keep you up to date with our latest news</h1>
+        <div class="info">
+          <label for="name"></label>
+          <input class="fname" type="text" id="name" name="name" placeholder="Full name" required />
+          <label for="email"></label>
+          <input type="text" name="email" id="email" placeholder="Email" required />
+          <label for="phone"></label>
+          <input type="text" name="phone" id="phone" placeholder="Phone number" required />
+        </div>
+        <p>Message</p>
+        <div>
+          <textarea for="message" name="message" id="message" rows="3" placeholder="Write your desire..."
+            required></textarea>
+        </div>
+        <button type="submit" href="/welcome" value="Send Message">Send Message</button>
+      </form>
+    </div>
+  </main>
+  <footer class="page-footer align-bottom py-3 my-3 border-top">
+    <ul class="row text-center list-unstyled mt-2 list-inline">
+      <li class="col list-inline-item">
+        <a href="/policy">Policy</a>
+      </li>
+
+      <li class="col list-inline-item">
+        <a href="/contact">Contact</a>
+      </li>
+
+      <li class="col list-inline-item">
+        <a href="/terms-of-use">Terms of use</a>
+      </li>
+    </ul>
+    <div class="footer-copyright pb-3 text-center">
+      <strong>! Karhebti Tunisia !</strong> <br /> © 2021. All rights reserved.
+    </div>
+  </footer>
+</body>
+
+</html>

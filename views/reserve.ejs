@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>Reservation</title>
+  <link
+      rel="icon"
+      href="http://pngwebicons.com/uploads/car/ico/car_icon3898.ico"
+    />
+    <meta name="robots" content="noindex">
+ 
+  
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="/main.css">
+  
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  
+  
+    <body class="container shadow">
+  
+      <header class="site-header py-3 my-3 align-top border-bottom">
+    <nav class="navbar navbar-expand-lg bg-inverse font-weight-bold">
+      <a class="navbar-brand" href="/welcome">
+        <h1 class="mt-4">Home</h1>
+      </a>
+  
+      <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="fa fa-bars fa-lg" style="font-size: 30px;"></span>
+      </button>
+  
+      <div class="navbar-collapse collapse" id="navbarToggle" >
+        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+          
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="/regcar">Add new Car</a>
+          </li> -->
+  
+          <li class="nav-item">
+            <a class="nav-link" href="/reserve">Reservations</a>
+          </li>
+  
+          <li class="nav-item">
+            <a class="nav-link" href="/profile">
+              <i class="text-primary fa fa-user-circle fa-lg"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/users/logout">
+              <i class="text-primary fa fa-sign-out fa-lg"></i>
+            </a>
+          </li>
+  
+          <!-----------------------------Search Bar---------------------------->
+          <form class="navbar-forml form-inline" action="/find" method="GET">
+            <div class="input-group">
+              <input id="vname" type="search" name="vname" class="form-control" placeholder="Search a Car" required=""
+                autofocus="">
+              <div class="input-group-addon" style="margin-left: 10px;">
+                <button class="btn btn-outline-primary" type="submit">
+                  <i class="fa fa-search"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+          <!------------------------------------------------------------------->
+        </ul>
+      </div>
+    </nav>
+  </header>
+  
+
+  <main class="container pb-5" role="main">
+    <h5 class="text-center" >
+      Return to your
+      <a href="/dashboard">Dashboard</a>
+    </h5>
+    <div class="container active show p5">
+      <% if (records1) { %>
+      <div class="row cars_container card-deck-wrapper card-deck">
+        <% records1.forEach(function(row) { %>
+        <div class="col my-2 card text-center">
+          <img
+            class="card-img-top img-fluid mx-auto d-block"
+            loading="lazy"
+            src="uploads/<%= row.imagename %>"
+            alt=""
+          />
+          <p class="card-text">
+            <strong>
+              <i> <%= row.vname %> </i>
+            </strong>
+            -
+              <%= row.vmodel %>
+            <br>
+            <b>Total Price: </b><i><%= row.fullprice %></i>
+            TND
+            <br/>
+            <br/>
+            <i class="col"> <b>Out:</b>
+              <%= new Date(row.dateIn).toDateString() %>
+            </i>
+            <br />
+            <i class="col"> <b>In:</b>
+              <%= new Date(row.dateOut).toDateString() %>
+            </i>
+          </p>
+          
+          <form  action="/reserve/deletepath/<%= row._id %>" method="post" >
+            <input class="btn btn-outline-primary" type="submit" value="Delete">
+          </form>
+          <hr>
+        </div>
+        <% }) %>
+      </div>
+      
+    </div>
+    
+    <% } else if(!records1) { %>
+    <h4 class="text-center" style="margin: 150px 0 150px;">
+      You have no Car Reserved <br> <br>
+     
+    </h4>
+    <% } %>
+  </main>
+
+
+
+    <footer class="page-footer align-bottom py-3 my-3 border-top">
+        <ul class="row text-center list-unstyled mt-2 list-inline">
+          <li class="col list-inline-item">
+            <a href="/policy">Policy</a>
+          </li>
+      
+          <li class="col list-inline-item">
+            <a href="/contact">Contact</a>
+          </li>
+      
+          <li class="col list-inline-item">
+            <a href="/terms-of-use">Terms of use</a>
+          </li>
+        </ul>
+      
+        <div class="footer-copyright pb-3 text-center">
+          <strong>! Karhebti Tunisia !</strong> <br /> © 2021. All rights reserved.
+        </div>
+      </footer>
+      
+      <!-- jQuery, Popper and Bootstrap -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+      
+      <script src="/js/main.js"></script>
+  </body>
+</html>

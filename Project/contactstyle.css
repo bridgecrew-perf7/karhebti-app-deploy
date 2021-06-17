@@ -1,0 +1,64 @@
+#logo {
+  color: white;
+}
+
+.logo:hover {
+  font-size: 1.3em;
+  /* color: rgb(221, 54, 54) !important; */
+}
+
+#nav-bar {
+  position: stricky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar-brand {
+  height: 40px;
+  padding-left: 30px;
+  /* color: darkgrey !important; */
+  /* font-size: 1.5em !important; */
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1;
+}
+
+.navbar-nav li {
+  padding: 0 10px;
+}
+
+.navbar-nav li a {
+  float: right;
+  text-align: left;
+  transition: all ease 0.4s;
+}
+
+#nav-bar ul li a:hover {
+  color: black !important;
+}
+
+.navbar {
+  background: #28a7e9;
+}
+
+.navbar-toggler {
+  border: none !important;
+}
+
+.nav-link {
+  color: white !important;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.container {
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+.page-footer {
+  padding-left: 2%;
+  padding-right: 2%;
+}
